@@ -1,0 +1,87 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    margin-bottom: 700px;
+}
+
+
+.navbar {
+    margin-left: 3%;
+    margin-top: 10px;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar img {
+    height: 30px;
+}
+
+.navbar li {
+  float: left;
+  margin-left: 10px;
+}
+
+.navbar a {
+  display: block;
+  padding: 8px;
+}
+
+.big-header img {
+ width: 100vw;
+ position: relative;
+ /* margin-left: -50vw; */
+ margin-top: 100px;
+}
+
+.product-group1 {
+  display: block;
+  width: 100%;
+}
+
+.product-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border: 1px solid black;
+  float: left;
+  margin: 10px;
+  padding: 10px 3px;
+  /*setting width for each and every card element as well as -10px for removing the margin width for 5 elements*/
+  width: calc( 100% / 4 - (5*10px));
+}
+
+.product-card img {
+  width: 200px;
+}
+
+
+.sizes {
+  color: grey;
+  font-size: 12px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ff8299;
+  color: white;
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  margin: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid green;
+}

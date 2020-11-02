@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tweeter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- jQuery and JS bundle w/ Popper.js -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          {% if current_user.is_authenticated %}
+          <li class="nav-item active">
+           <a class="navbar-brand" href="{{ url_for("feed")}}"><img src="https://s2.qwant.com/thumbr/700x0/7/e/6780769a5d8c4aa80a18185773e53ea92bc997821777765b1290ce84cd406c/FEATURED-TWITTER_Loss-01-1200x630.jpg?u=http%3A%2F%2Fwww.wired.com%2Fwp-content%2Fuploads%2F2015%2F07%2FFEATURED-TWITTER_Loss-01-1200x630.jpg&q=0&b=1&p=0&a=1" height="30" class="d-inline-block align-top" alt=""></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href={{ url_for("feed") }}>Feed</a>
+          </li>
+          <li class="nav-item active">
+               <a class="nav-link" href={{ url_for("post") }}>Tweet</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href={{ url_for("logout") }}>Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item active">
+            <a class="nav-link" href={{ url_for("register") }}>Register</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href={{ url_for("login") }}>Login</a>
+        </li>
+        </ul>
+
+        {% endif %}
+      </div>
+    </nav>
+
+<div class="container">
+ <div class="row">
+
+    <div class="card col-sm" style="width: 10rem;">
+         <br>
+         <h4>Make new connections</h4>
+         <b>User: {{ user_handle }}<b>
+         <p>{{ first_name }} {{last_name}}</p>
+    </div>
